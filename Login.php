@@ -1,4 +1,4 @@
-<?php	//esto va a ser una plantilla para modificar ligeramente y conseguir los php requeridos
+<?php	//php encargado de comprobar si el usuario existe y usa la contraseña correcta
 
 include_once('globals.php');
 

@@ -1,4 +1,4 @@
-<?php	
+<?php	//php encargado de pasar todos los datos públicos de un usuario
 
 include_once('globals.php');
 

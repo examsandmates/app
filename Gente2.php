@@ -1,10 +1,9 @@
-<?php
+<?php //php encargado de pasar la gente con la que coincidimos en alguna asignatura
 
 include_once('globals.php');
 
 $user = $_POST["CONSULTA_USUARIO"];
 $sql1 = 'SELECT id_subj FROM subjects WHERE user = "'.$user.'"';
-//$sql2 = 'SELECT nick FROM users WHERE NOT nick = "'.$user.'"ORDER BY nick';   //
 
 $conexion = mysqli_connect(config::host(), config::user(), config::pass(), config::db());
 

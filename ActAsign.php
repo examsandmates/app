@@ -25,10 +25,16 @@ for($i=1;$i<count($jsonf);$i++)
 	$id_asign = $jsonf[$i]["id_asign"];
 	
 	if(!$result2 = mysqli_query($conexion, "INSERT INTO subjects (user, id_subj, subj) VALUES ('$user','$id_asign', '$asign')")) 
-			die("No se pudo conectar $i: " . mysqli_error($conexion));
-			
-
+			{
+				echo '[{"status":"no","comment":"Ha habido un problema con la base de datos"}]';
+				die("No se pudo conectar $i: " . mysqli_error($conexion));
+			}
+		
+ //sleep(0.1);
+ 
 }
+
+echo '[{"status":"si","comment":"Se ha actualizado la base de datos correctamente"}]';
 
 
 /*$mensaje = '[{"user":"santapol"},{"asign":"Ing. del transporte","id_asign":"TRA"},{"asign":"Teoría de estructuras","id_asign":"EST"}]';

@@ -1,9 +1,8 @@
-<?php	//esto va a ser una plantilla para modificar ligeramente y conseguir los php requeridos
+<?php	//php encargado de pasar todos los datos de un grupo
 
 include_once('globals.php');
 
-/*$q = $_POST["q"];*/
-$sql = 'SELECT xxxx FROM yyyy WHERE zzzz = "'.$q.'"';
+$sql = 'SELECT name FROM groups';
 
 $conexion = mysqli_connect(config::host(), config::user(), config::pass(), config::db());
 mysqli_set_charset($conexion, "utf8");
